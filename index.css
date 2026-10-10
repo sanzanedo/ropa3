@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-subtle: #f1f5f9;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border-main: #cbd5e1;
+    --primary-main: #0284c7;
+    --primary-text: #ffffff;
+    --accent-badge: #e0f2fe;
+    --accent-badge-text: #0369a1;
+    --focus-ring: #0284c7;
+    --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  }
+
+  /* Theme: Dark */
+  .theme-oscuro {
+    --bg-main: #0b0f19;
+    --bg-card: #162032;
+    --bg-subtle: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-main: #334155;
+    --primary-main: #38bdf8;
+    --primary-text: #0b0f19;
+    --accent-badge: #1e293b;
+    --accent-badge-text: #7dd3fc;
+    --focus-ring: #38bdf8;
+    --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  }
+
+  /* Theme: Yellow on Black (Baja Visión Internacional) */
+  .theme-amarillo-negro {
+    --bg-main: #000000;
+    --bg-card: #0a0a0a;
+    --bg-subtle: #1a1a1a;
+    --text-main: #ffff00;
+    --text-muted: #fff9a6;
+    --border-main: #ffff00;
+    --primary-main: #ffff00;
+    --primary-text: #000000;
+    --accent-badge: #000000;
+    --accent-badge-text: #ffff00;
+    --focus-ring: #ffffff;
+    --card-shadow: none;
+  }
+
+  /* Theme: Black on Yellow */
+  .theme-negro-amarillo {
+    --bg-main: #fff59d;
+    --bg-card: #fff9c4;
+    --bg-subtle: #fff176;
+    --text-main: #000000;
+    --text-muted: #212121;
+    --border-main: #000000;
+    --primary-main: #000000;
+    --primary-text: #fff59d;
+    --accent-badge: #fff176;
+    --accent-badge-text: #000000;
+    --focus-ring: #000000;
+    --card-shadow: none;
+  }
+
+  /* Theme: Sepia (Descanso Visual) */
+  .theme-sepia {
+    --bg-main: #fbf0d9;
+    --bg-card: #f5e5c9;
+    --bg-subtle: #ede0bf;
+    --text-main: #3d2e1e;
+    --text-muted: #604e38;
+    --border-main: #d4be9b;
+    --primary-main: #7a4e2d;
+    --primary-text: #fbf0d9;
+    --accent-badge: #ede0bf;
+    --accent-badge-text: #50331e;
+    --focus-ring: #7a4e2d;
+    --card-shadow: 0 4px 6px -1px rgb(61 46 30 / 0.08);
+  }
+
+  /* Theme: Azul Noche Suave */
+  .theme-azul-suave {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-subtle: #334155;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border-main: #475569;
+    --primary-main: #60a5fa;
+    --primary-text: #0f172a;
+    --accent-badge: #1e3a5f;
+    --accent-badge-text: #93c5fd;
+    --focus-ring: #60a5fa;
+    --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+  }
+
+  /* Fonts */
+  .font-lexend {
+    font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .font-atkinson {
+    font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .font-comic {
+    font-family: 'Comic Neue', cursive, sans-serif;
+  }
+  .font-lora {
+    font-family: 'Lora', Georgia, serif;
+  }
+  .font-mono {
+    font-family: 'Space Mono', monospace;
+  }
+  .font-system {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Font scales */
+  .text-scale-normal {
+    font-size: 1rem; /* 16px */
+  }
+  .text-scale-grande {
+    font-size: 1.15rem; /* 18.4px */
+  }
+  .text-scale-muy-grande {
+    font-size: 1.35rem; /* 21.6px */
+  }
+  .text-scale-gigante {
+    font-size: 1.6rem; /* 25.6px */
+  }
+
+  /* Spacings */
+  .spacing-normal {
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
+  .spacing-amplio {
+    line-height: 1.85;
+    letter-spacing: 0.04em;
+    word-spacing: 0.08em;
+  }
+  .spacing-extra-amplio {
+    line-height: 2.15;
+    letter-spacing: 0.09em;
+    word-spacing: 0.16em;
+  }
+}
+
+/* Base accessible focus ring */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Sound indicator ripple animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.speaking-pulse {
+  animation: pulse-ring 1.5s infinite ease-in-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Vestiteca - Léxico Inclusivo de la Ropa",
+  "description": "Aplicación altamente accesible e inclusiva para aprender y repasar el vocabulario de la ropa con lectura por voz, control de fuentes, tamaños, alto contraste y lectura fácil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
